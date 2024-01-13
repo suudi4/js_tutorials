@@ -7,16 +7,22 @@ function orderCoffee(order) {
 
 console.log(orderCoffee("capuchino"));
 
-async function orderjoke() {
-  let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+// fetch todo list from api
 
-  let data = await response.json(); // Get the JSON data from the response
+async function gettodos(url) {
+  // code here
+
+  const response = await fetch(url);
+  const data = await response.json();
 
   //   console.log(JSON.stringify(data));
-  //
-  data.forEach((todo) => {
-    console.log(todo.title);
+
+  data.forEach((element) => {
+    //  if completed
+
+    console.log(element.completed);
+    // else  the job is not completed
   });
 }
 
-orderjoke();
+gettodos("https://jsonplaceholder.typicode.com/todos");
