@@ -7,10 +7,12 @@ function orderCoffee(order) {
 
 console.log(orderCoffee("capuchino"));
 
-function orderjoke() {
-  let respone = fetch("https://jsonplaceholder.typicode.com/todos/1");
+async function orderjoke() {
+  let response = await fetch("https://jsonplaceholder.typicode.com/todos");
 
-  console.log(respone);
+  let data = await response.json(); // Get the JSON data from the response
+
+  console.log(JSON.stringify(data));
 }
 
 orderjoke();
