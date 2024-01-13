@@ -19,8 +19,12 @@ async function gettodos(url) {
 
   data.forEach((element) => {
     //  if completed
+    if (element.completed == true) {
+      console.log(element.title);
+    } else {
+      console.log("this job is not completed");
+    }
 
-    console.log(element.completed);
     // else  the job is not completed
   });
 }
