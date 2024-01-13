@@ -4,4 +4,4 @@ function orderCoffee(order) {
   return order;
 }
 
-orderCoffee("capuchino");
+console.log(orderCoffee("capuchino"));
