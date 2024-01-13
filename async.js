@@ -8,7 +8,7 @@ function orderCoffee(order) {
 console.log(orderCoffee("capuchino"));
 
 function orderjoke() {
-  let respone = fetch("https://api.api-ninjas.com/v1/jokes");
+  let respone = fetch("https://jsonplaceholder.typicode.com/todos/1");
 
   console.log(respone);
 }
