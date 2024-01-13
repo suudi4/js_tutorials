@@ -12,7 +12,11 @@ async function orderjoke() {
 
   let data = await response.json(); // Get the JSON data from the response
 
-  console.log(JSON.stringify(data));
+  //   console.log(JSON.stringify(data));
+  //
+  data.forEach((todo) => {
+    console.log(todo.title);
+  });
 }
 
 orderjoke();
